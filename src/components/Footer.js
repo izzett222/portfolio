@@ -18,6 +18,10 @@ const Footer = () => {
             flexGrow: 1,
             maxWidth: '834px',
             margin: '0 auto',
+            ' @media (max-width: 866px)': {
+                marginRight: 32,
+                marginLeft: 32
+            }
         }}>
             <p css={{
                 fontFamily: 'aileron, sans-serif',

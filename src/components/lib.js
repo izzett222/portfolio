@@ -81,4 +81,7 @@ export const P = styled.p({
     lineHeight: '150.19%',
     fontSize: 18,
     marginBlock: 0,
+    ' @media (max-width: 866px)': {
+        fontSize: 16,
+    }
 })

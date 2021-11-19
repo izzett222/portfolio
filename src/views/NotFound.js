@@ -3,7 +3,7 @@
 import { jsx } from '@emotion/react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import { A, P } from '../components/lib';
+import { P, RouterLink } from '../components/lib';
 
 const NotFound = () => {
     return <div css={{
@@ -16,7 +16,11 @@ const NotFound = () => {
             marginLeft: 'auto',
             marginRight: 'auto',
             height: 'calc(100vh - 222px)',
-            marginTop: 96
+            marginTop: 96,
+            ' @media (max-width: 866px)': {
+                marginRight: 32,
+                marginLeft: 32,
+            }
         }}>
             <div>
                 <h1 css={{
@@ -33,9 +37,9 @@ const NotFound = () => {
                     Page not found
                 </h1>
                 <P>the page you are trying to view is not found.</P>
-                <A css={{
+                <RouterLink to='/' css={{
                     marginTop: 16
-                }}>Take me back home</A>
+                }}>Take me back home</RouterLink>
             </div>
 
         </main>

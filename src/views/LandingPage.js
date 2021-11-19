@@ -2,10 +2,10 @@
 /* @jsx jsx */
 import { jsx } from '@emotion/react';
 import Header from '../components/Header';
-import { H2, Ul, P, A, RouterLink  } from '../components/lib';
+import { H2, Ul, P, A, RouterLink } from '../components/lib';
 import chatApp from '../assets/chatimage1.png';
 import Footer from '../components/Footer';
-import {  useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const LandingPage = () => {
@@ -13,18 +13,18 @@ const LandingPage = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-      if (hash === '') {
-        window.scrollTo(0, 0);
-      }
-      else {
-        setTimeout(() => {
-          const id = hash.replace('#', '');
-          const element = document.getElementById(id);
-          if (element) {
-            element.scrollIntoView();
-          }
-        }, 0);
-      }
+        if (hash === '') {
+            window.scrollTo(0, 0);
+        }
+        else {
+            setTimeout(() => {
+                const id = hash.replace('#', '');
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView();
+                }
+            }, 0);
+        }
     }, [pathname, hash, key]);
     return <div css={{
         background: '#FAFBFC',
@@ -36,7 +36,13 @@ const LandingPage = () => {
             marginLeft: 'auto',
             marginRight: 'auto',
             marginTop: 104,
-            marginBottom: 72
+            marginBottom: 72,
+            ' @media (max-width: 866px)': {
+                marginRight: 32,
+                marginLeft: 32,
+                marginTop: 80,
+
+            }
         }}>
             <div className='about me'>
                 <h1 css={{
@@ -45,14 +51,43 @@ const LandingPage = () => {
                     color: '#172B4D',
                     fontWeight: 'normal',
                     fontStyle: 'normal',
-                    lineHeight: '96.6%'
+                    lineHeight: '96.6%',
+                    ' @media (max-width: 866px)': {
+                        fontSize: 64,
+
+                    },
+                    ' @media (max-width: 670px)': {
+                        fontSize: 48,
+
+                    },
+                    ' @media (max-width: 525px)': {
+                        fontSize: 40,
+
+                    },
+                    ' @media (max-width: 445px)': {
+                        fontSize: 32,
+
+                    }
                 }}>Hi there, <span css={{ color: '#008DA6' }}>I’m Izzeddin</span>  <br /> FullStack developer</h1>
                 <p css={{
                     color: '#172B4D',
                     width: '100%',
                     fontSize: 24,
                     lineHeight: '138%',
-                    fontFamily: 'aileron, sans-serif'
+                    fontFamily: 'aileron, sans-serif',
+                    ' @media (max-width: 866px)': {
+                        fontSize: 22,
+
+                    },
+                    ' @media (max-width: 670px)': {
+                        fontSize: 18,
+
+                    },
+                    ' @media (max-width: 525px)': {
+                        fontSize: 16,
+                        lineHeight: '157%'
+
+                    },
                 }}>Hey, I’m Izzeddin, a full-stack developer. I’m on a journey to build amazing and thoughtful interfaces on the web.  It all began when I joined the Andela fellowship program where I learned both soft and technical skills to work in a team and build a web application from the ground up.
 
 
@@ -62,7 +97,19 @@ const LandingPage = () => {
                     width: '100%',
                     fontSize: 24,
                     lineHeight: '151.19%',
-                    fontFamily: 'aileron, sans-serif'
+                    fontFamily: 'aileron, sans-serif',
+                    ' @media (max-width: 866px)': {
+                        fontSize: 22,
+
+                    },
+                    ' @media (max-width: 670px)': {
+                        fontSize: 18,
+
+                    },
+                    ' @media (max-width: 550px)': {
+                        display: 'none'
+
+                    }
                 }}>
                     Since then I have been working at Cinetie to build a movie streaming platform and I started adding design to my skill set as I’m interested in how those same interfaces were conceived.
                 </p>
@@ -74,6 +121,10 @@ const LandingPage = () => {
                 width: '100%',
                 marginTop: '96px',
                 marginBottom: '96px',
+                ' @media (max-width: 866px)': {
+                    marginTop: 64,
+                    marginBottom: 64
+                }
             }}>
                 <div css={{
                     marginTop: 24,
@@ -82,7 +133,7 @@ const LandingPage = () => {
                     <H2 css={{
                         marginBottom: 0,
                         marginTop: 0,
-                        fontSize: 32
+                        fontSize: 28
                     }}>Skills</H2>
                     <p css={{
                         color: '#172B4D',
@@ -94,13 +145,27 @@ const LandingPage = () => {
                         fontSize: 18,
                         marginBlock: 0,
                         marginTop: 3,
-                        marginBottom: 9
+                        marginBottom: 9,
+                        marginRight: 16,
+                        '@media (max-width: 623px)': {
+                            width: 'auto',
+                            fontSize: 16,
+                        }
                     }}>for the past few year, I have been learning and practicing a lot of skill and still looking to add more</p>
                     <Ul css={{
                         display: 'flex',
                         width: 500,
                         justifyContent: 'space-between',
-                        marginBottom: 24
+
+                        marginBottom: 24,
+                        '@media (max-width: 623px)': {
+                            width: 'auto',
+                            justifyContent: 'space-around',
+                            fontsize: 16,
+                        },
+                        '@media (max-width: 575px)': {
+                            flexDirection: 'column'
+                        }
                     }}>
                         <div>
                             <li>javascript ES6</li>
@@ -127,6 +192,7 @@ const LandingPage = () => {
                     '&:hover': {
                         cursor: 'pointer',
                         picture: {
+
                             '&::before': {
                                 backgroundColor: '#35f',
                                 position: 'absolute',
@@ -137,6 +203,9 @@ const LandingPage = () => {
                                 display: 'inline-block',
                                 zIndex: 2,
                                 borderRadius: 5,
+                                '@media (max-width: 875px)': {
+                                    display: 'none'
+                                },
                             }
                         },
                         '.details': {
@@ -179,6 +248,20 @@ const LandingPage = () => {
                         bottom: -50,
                         left: 73,
                         transition: 'border 0.3s cubic-bezier(.77,0,.175,1)',
+                        ' @media (max-width: 700px)': {
+                            width: 400,
+                        },
+                        ' @media (max-width: 580px)': {
+                            width: 'auto',
+                            height: 'auto'
+                        },
+                        ' @media (max-width: 550px)': {
+                            position: 'static',
+                            left: 0,
+                            width: '100%',
+                            marginRight: 0,
+
+                        }
                     }}>
                         <RouterLink to='/chat-app' css={{
                             fontSize: 24,
@@ -192,6 +275,10 @@ const LandingPage = () => {
                         }}>web chat</RouterLink>
                         <P css={{
                             marginLeft: 24,
+                            marginRight: 16,
+                            ' @media (max-width: 700px)': {
+                                marginBottom: '24px'
+                            },
 
                         }}>A chat platform were friend connect with<br /> each other on the web.</P>
                     </div>
@@ -202,7 +289,7 @@ const LandingPage = () => {
             }}>
                 <H2 css={{ marginBlock: 0, marginBottom: 4 }}>Let’s work together</H2>
                 <P css={{ marginBottom: 8, }}>Feel free to reach out to me if you are<br /> looking for a developer</P>
-                <A href = "mailto: iizzeddin62@gmail.com">iizzeddin62@gmail.com</A>
+                <A href="mailto: iizzeddin62@gmail.com">iizzeddin62@gmail.com</A>
             </div>
         </main>
         <Footer />
