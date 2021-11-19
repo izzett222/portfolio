@@ -85,3 +85,17 @@ export const P = styled.p({
         fontSize: 16,
     }
 })
+
+export const H4 = styled.h4({
+    fontFamily: 'aileron, sans-serif',
+    fontSize: 18,
+    lineHeight: '152.69%',
+    fontStyle: 'normal',
+    fontWeight: 300,
+    color: '#172B4D',
+    margin: 0,
+
+});
+
+
+

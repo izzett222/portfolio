@@ -34,7 +34,11 @@ const Header = () => {
                 fontFamily: '"DM Serif Text", serif',
                 fontSize: 20,
                 color: '#172B4D',
-                textDecoration: 'none'
+                textDecoration: 'none',
+                textAlign: 'center',
+                ' @media (max-width: 800px)': {
+                    marginTop: 7
+                },
             }}>Izzeddin</Link>
             <div css={{
                 display: 'flex',
@@ -56,7 +60,7 @@ const Header = () => {
                     background: 'none',
                     border: 'none',
                     zIndex: 40
-                }}><img src={hamburg} alt='hamburg' css={{ height: 35, width: 27, }} /></button>
+                }}><img src={hamburg} alt='hamburg' css={{ height: 35, width: 27, position: 'relative', right: -8 }} /></button>
                 {open && <div css={{
                     background: '#FAFBFC',
                     position: 'fixed',

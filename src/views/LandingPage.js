@@ -185,7 +185,7 @@ const LandingPage = () => {
             <div id='projects'>
                 <H2>Projects I have worked on</H2>
                 <P css={{ marginBottom: 16, marginTop: 4, }}>I like to stay busy and always have a project in the works. Take a look at some<br />of the applications I've dedicated my time to.</P>
-                <div onClick={() => navigate('/chat-app', { replace: true })} css={{
+                <div onClick={() => navigate('/chat-app')} css={{
                     maxWidth: '834px',
                     height: 'auto',
                     position: 'relative',
