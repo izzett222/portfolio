@@ -5,10 +5,11 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import leftArrow from '../assets/leftArrow.svg';
 import { A, H2, H4, P, RouterLink } from '../components/lib';
-import chatApp1 from '../assets/chatapp1.png';
-import chatImage from '../assets/chatimage1.png';
+import myTools from '../assets/mytools.png';
+import myToolsSignup from '../assets/my-tools-signup.png';
+import myToolsList from '../assets/my-tools-list.png';
 
-const ChatApp = () => {
+const MyTools = () => {
     return <div css={{
         background: '#FAFBFC',
         position: 'relative',
@@ -47,7 +48,7 @@ const ChatApp = () => {
 
                 }
             }}>
-                WEB CHAT
+                MY TOOLS
             </h1>
             <RouterLink to="/" css={{
                 border: 'none',
@@ -74,7 +75,7 @@ const ChatApp = () => {
                     fontFamily: 'aileron, sans-serif',
                 }}>back</span>
             </RouterLink>
-            <P>Web chat is a side project that I built to help people connect and chat with friends. It was built with reactjs, nodejs/express, socket.io and postgresql.</P>
+            <P>My-tools is a side project that I built for people who want a central place to save tools they using now and are planning to use in the future. It was built with reactjs, nodejs/express, socket.io and postgresql with prisma as the ORM.</P>
             <div css={{
                 maxWidth: 241,
                 display: 'flex',
@@ -83,22 +84,21 @@ const ChatApp = () => {
             }}>
                 <div>
                     <H4>Code</H4>
-                    <A href={"https://github.com/izzett222/chat"} target={"_blank"}
-                        css={{
-                            color: '#008DA6',
-                            marginTop: 4,
-                        }}>Github repository</A>
+                    <A href="https://github.com/izzett222/my-tools" target={"_blank"} css={{
+                        color: '#008DA6',
+                        marginTop: 4,
+                    }}>Github repository</A>
                 </div>
                 <div >
                     <H4>Live demo</H4>
-                    <A href='https://chat-web-site.netlify.app' target={"_blank"} 
+                    <A href="https://my-tools-web.netlify.app" target={"_blank"} 
                     css={{
                         color: '#008DA6',
                         marginTop: 4,
                     }}>View site</A>
                 </div>
             </div>
-            <img src={chatApp1} alt='chat app signup page' css={{
+            <img src={myTools} alt='chat app signup page' css={{
                 display: 'block',
                 marginTop: 24,
                 maxWidth: 621,
@@ -110,8 +110,8 @@ const ChatApp = () => {
                 }
             }} />
             <H2>Purpose and Goal</H2>
-            <P css={{ maxWidth: 621, marginTop: 16 }}>The project will allow people chat without much of a hussle and the goal was to create something simple and complete which people can use easily. </P>
-            <img src={chatImage} alt='chat app page' css={{
+            <P css={{ maxWidth: 621, marginTop: 16 }}>The idea behind the project was to build a CRUD application to manage people's programming tools in a central area. </P>
+            <img src={myToolsSignup} alt='chat app page' css={{
                 display: 'block',
                 marginTop: 24,
                 maxWidth: 621,
@@ -123,17 +123,28 @@ const ChatApp = () => {
                 }
             }} />
             <H2>Implementation</H2>
-            <P css={{ maxWidth: 621, marginTop: 16, marginBottom: 32 }}>The server uses nodejs and expressjs for routing. Postgresql is used as the database. I used socket.io for  real-time communication between client and server.<br />
-                I used Reactjs for the client and emotion.sh for css in js. the focus was to create a screen where the user can view all their friends and chat with them on the same screen
+            <P css={{ maxWidth: 621, marginTop: 16, marginBottom: 32 }}>The server uses nodejs and expressjs for routing. Postgresql is used as the database with prisma as the ORM.
+                I used Reactjs for the client and emotion.sh for css in js. the focus was to create a dashboard where a user can create different list and add tools to those lists.
             </P>
+            <img src={myToolsList} alt='chat app page' css={{
+                display: 'block',
+                marginTop: 24,
+                maxWidth: 621,
+                height: 'auto',
+                filter: 'drop-shadow(2px 4px 8px rgba(23, 43, 77, 0.18))',
+                marginBottom: 32,
+                ' @media (max-width: 685px)': {
+                    width: '100%'
+                }
+            }} />
             <H2>Lesson Learned</H2>
             <P css={{
                 marginTop: 16,
                 marginBottom: 96
-            }}>The project really helped me practice building react functional components with hooks. Other than technical practice I did, the project showed me the importance of planning before execution whether it is designing or coding</P>
+            }}>I was able to get familiar with PRISMA ORM which was the main focus and I learned a lot when it comes to design especially alignment</P>
         </main>
         <Footer />
     </div>
 }
 
-export default ChatApp;
+export default MyTools;
